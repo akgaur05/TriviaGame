@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="TriviaHomework">
+    <meta name="author" content="Akanksha Kapoor">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Trivia Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="mainPage">
+            <div class="containerHeading">
+                <h3 class="ml7">
+                    <span class="text-wrapper">
+                        <span class="letters">Trivial Trivia Game</span>
+                    </span>
+                </h3>
+            </div>
+            <br><br><br><br><br>
+            <p class="startRulesBtn text-center">
+                <button type="button" class="btn my-2 mx-2" data-toggle="modal" data-target="#myModal">Rules</a>
+                <button type="button" class="btn my-2" id="startGame">Start</a>
+            </p>
+        </div>
+        <div class="modal" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-center">Rules</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>1. You have to answer 10 questions.</p>
+                        <p>2. For each question, you get 10 seconds to answer.</p>
+                        <p>3. For every correct answer you get a point.No negative marking.</p>
+                        <p>4. The correct answer will be shown to you,if you fail to answer within the time limit or select
+                            an incorrect option.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerHeading text-center" id="gameScreen">
+                <h1 id="start">Click to start the quiz!</h1>
+        </div>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script src="./assets/javascript/app.js"></script>
+    <script src="./assets/javascript/styleHtmlPage.js"></script>
+</body>
+</html>
