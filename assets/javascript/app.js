@@ -8,8 +8,8 @@ $(document).ready(function() {
 
     // track which question we are on
     var questionCounter = 0;
-    // initial time of 15 seconds for each question
-    var time = 15;
+    // initial time of 10 seconds for each question
+    var time = 10;
     // will keep tally of right guesses for end game
     var correctGuesses = 0;
     //will keep tally of wrong guesses for end game
@@ -133,7 +133,7 @@ $(document).ready(function() {
 			correctAnswer + 
 			"</span></p>" + 
 			questions[questionCounter].image);
-		setTimeout(nextQuestion, 4000);
+		setTimeout(nextQuestion, 3000);
 		questionCounter++;
 	}
 
@@ -146,7 +146,7 @@ $(document).ready(function() {
 			correctAnswer + 
 			"</span></p>" + 
 			questions[questionCounter].image);
-		setTimeout(nextQuestion, 4000);
+		setTimeout(nextQuestion, 3000);
 		questionCounter++;
 	}
 
@@ -160,7 +160,7 @@ $(document).ready(function() {
 				correctAnswer + 
 				"</span></p>" + 
 				questions[questionCounter].image);
-			setTimeout(nextQuestion, 4000);
+			setTimeout(nextQuestion, 3000);
 			questionCounter++;
 		}
 	}
@@ -168,16 +168,16 @@ $(document).ready(function() {
 	// screen that shows final score and nice message :)
 	function resultsScreen() {
 		if (correctGuesses === questions.length) {
-			var endMessage = "Perfection! Might want to go outside more tho";
-			var bottomText = "#nerdalert!";
+			var endMessage = "Perfect!";
+			var bottomText = "You are a genious.";
 		}
 		else if (correctGuesses > incorrectGuesses) {
-			var endMessage = "Good work! But do better you can...";
-			var bottomText = "all your base are belong to us";
+			var endMessage = "Ah!!";
+			var bottomText = "Can do better.Let's try again!!";
 		}
 		else {
-			var endMessage = "You seem to have taken an arrow to the knee";
-			var bottomText = "#scrub";
+			var endMessage = "You failed!!";
+			var bottomText = "Why God? Why?";
 		}
 		$("#gameScreen").html("<p>" + endMessage + "</p>" + "<p>You got <strong>" + 
 			correctGuesses + "</strong> right.</p>" + 
@@ -206,7 +206,7 @@ $(document).ready(function() {
 	// moves question counter forward to show next question
 	function nextQuestion() {
 		if (questionCounter < questions.length) {
-			time = 15;
+			time = 10;
 			$("#gameScreen").html("<p>You have <span id='timer'>" + time + "</span> seconds left!</p>");
 			questionContent();
 			timer();
